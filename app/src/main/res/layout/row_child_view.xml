@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/mainChild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/expandableImageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+        <TextView
+            android:id="@+id/categoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/expandableImageView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/expandableImageView"
+            android:text="@string/category" />
+
+        <CheckBox
+            android:id="@+id/categoryCheckbox"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTintMode="src_in"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/checkbox_backgrounnd"
+            android:button="@drawable/ic_baseline_add_24"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/expandable_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewSubCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

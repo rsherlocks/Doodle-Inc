@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+
+     <androidx.appcompat.widget.Toolbar
+         android:id="@+id/toolbarMain"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         app:titleTextColor="#000"
+         app:title="Search Category"
+        app:titleMarginStart="90dp"
+         android:elevation="10dp"
+         android:textAlignment="center"
+         android:textDirection="firstStrong"
+         android:background="#ffffff"
+         app:menu="@menu/menu"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+        <SearchView
+            android:queryHint="Personalize your feed"
+            android:layout_width="match_parent"
+            android:iconifiedByDefault="true"
+            android:focusable="true"
+            android:layout_height="wrap_content"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_marginTop="10dp"
+       android:id="@+id/recyclerViewCategory"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
+
+</LinearLayout>
