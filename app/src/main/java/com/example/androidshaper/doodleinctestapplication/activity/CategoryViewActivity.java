@@ -29,7 +29,7 @@ public class CategoryViewActivity extends AppCompatActivity
     List<CategoryName> categoryNameList=new ArrayList<>();
     RecyclerView recyclerViewCategoryName;
     MyItemShowAdapter myItemShowAdapter;
-    SharedPreferences sharedPreferences;
+    public static SharedPreferences sharedPreferences;
     Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState)
